@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZJ181o1ZOPRKS2P8ZUddp/NXu96L1uL9iaNS2oEGwpEfu8l4I3uYLFU9hWm0aQsYB6NPzwpGE++jxWrSHbEflg==",
+  "dgSpecHash": "SUqWI6/P1Zu1mRmRUWk0Fbb/6nbpLJDScb71aDxz/AMaUIKsFqLuY8HFmfykIcF9qqPvF8iXKV7ZZg/ikgjBZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\02_RestWithASP-Net5Udemy_Calculadora\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy.csproj",
+  "projectFilePath": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\02_RestWithASP-Net5Udemy_Calculadora\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy_Calculadora.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MarcioRobertodaSilva\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.17\\microsoft.aspnetcore.mvc.razor.extensions.5.0.17.nupkg.sha512",
     "C:\\Users\\MarcioRobertodaSilva\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\5.0.17\\microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.17.nupkg.sha512",

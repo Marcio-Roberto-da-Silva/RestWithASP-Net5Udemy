@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\RestWithASP-Net5Udemy\\RestWithASP-Net5Udemy.csproj",
+      "projectUniqueName": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\00_RestWithASP-Net5Udemy_ScaffoldViaTerm\\RestWithASP-Net5Udemy.csproj",
       "projectName": "RestWithASP-Net5Udemy",
-      "projectPath": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\RestWithASP-Net5Udemy\\RestWithASP-Net5Udemy.csproj",
+      "projectPath": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\00_RestWithASP-Net5Udemy_ScaffoldViaTerm\\RestWithASP-Net5Udemy.csproj",
       "packagesPath": "C:\\Users\\MarcioRobertodaSilva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\RestWithASP-Net5Udemy\\obj\\",
+      "outputPath": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\00_RestWithASP-Net5Udemy_ScaffoldViaTerm\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MarcioRobertodaSilva\\AppData\\Roaming\\NuGet\\NuGet.Config",

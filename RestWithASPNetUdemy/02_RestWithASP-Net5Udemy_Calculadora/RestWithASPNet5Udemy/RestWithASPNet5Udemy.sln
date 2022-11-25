@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestWithASPNet5Udemy", "RestWithASPNet5Udemy\RestWithASPNet5Udemy.csproj", "{55B5DEBE-E8B4-44C0-A466-BE3DAD0CA62F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestWithASPNet5Udemy_Calculadora", "RestWithASPNet5Udemy\RestWithASPNet5Udemy_Calculadora.csproj", "{55B5DEBE-E8B4-44C0-A466-BE3DAD0CA62F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
