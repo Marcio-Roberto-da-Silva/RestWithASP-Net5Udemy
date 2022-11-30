@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestWithASP-Net5Udemy", "RestWithASP-Net5Udemy\RestWithASP-Net5Udemy.csproj", "{7661D59D-7BA8-4D5C-9289-E6B3A142D31D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestWithASP-Net5Udemy", "00_RestWithASP-Net5Udemy_ScaffoldViaTerm\RestWithASP-Net5Udemy.csproj", "{75BBA391-CBF7-43F0-8C7D-B03C1942B79E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "teste", "RestWithASP-Net5Udemy\teste\teste.csproj", "{9DDF333C-2381-42C5-8E63-C7C4AE407B19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestWithASPNet5Udemy", "01_RestWithASP-Net5Udemy_ScaffoldViaVisualStudio\RestWithASPNet5Udemy\RestWithASPNet5Udemy\RestWithASPNet5Udemy.csproj", "{63C6BCEB-2137-48C4-BBD4-E1BD4CC80197}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestWithASPNet5Udemy1", "RestWithASPNet5Udemy1\RestWithASPNet5Udemy1.csproj", "{CB316FF0-F0DD-4356-9841-778C56B9F180}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestWithASPNet5Udemy_Calculadora", "02_RestWithASP-Net5Udemy_Calculadora\RestWithASPNet5Udemy\RestWithASPNet5Udemy\RestWithASPNet5Udemy_Calculadora.csproj", "{7F6E45A4-9FBE-4711-85BE-05753113D020}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7661D59D-7BA8-4D5C-9289-E6B3A142D31D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7661D59D-7BA8-4D5C-9289-E6B3A142D31D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7661D59D-7BA8-4D5C-9289-E6B3A142D31D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7661D59D-7BA8-4D5C-9289-E6B3A142D31D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DDF333C-2381-42C5-8E63-C7C4AE407B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DDF333C-2381-42C5-8E63-C7C4AE407B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DDF333C-2381-42C5-8E63-C7C4AE407B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DDF333C-2381-42C5-8E63-C7C4AE407B19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75BBA391-CBF7-43F0-8C7D-B03C1942B79E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75BBA391-CBF7-43F0-8C7D-B03C1942B79E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75BBA391-CBF7-43F0-8C7D-B03C1942B79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75BBA391-CBF7-43F0-8C7D-B03C1942B79E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63C6BCEB-2137-48C4-BBD4-E1BD4CC80197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C6BCEB-2137-48C4-BBD4-E1BD4CC80197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C6BCEB-2137-48C4-BBD4-E1BD4CC80197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C6BCEB-2137-48C4-BBD4-E1BD4CC80197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB316FF0-F0DD-4356-9841-778C56B9F180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB316FF0-F0DD-4356-9841-778C56B9F180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB316FF0-F0DD-4356-9841-778C56B9F180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB316FF0-F0DD-4356-9841-778C56B9F180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F6E45A4-9FBE-4711-85BE-05753113D020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6E45A4-9FBE-4711-85BE-05753113D020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6E45A4-9FBE-4711-85BE-05753113D020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6E45A4-9FBE-4711-85BE-05753113D020}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
