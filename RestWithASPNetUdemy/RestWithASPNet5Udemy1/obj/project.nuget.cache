@@ -1,15 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "rIJgmqU26eKnfHXvvErHkjGuVdJquRjvfOjR+XNaSsBWRVVXO0C3LxccB8Ll1VPg+G4KfyYBJIbdHGp0rURQhQ==",
-  "success": true,
+  "dgSpecHash": "27OyatsYnTHlicVvoZ3OF3BGyh484+fh9wKyvA/ri5sFnyHWhzzks9iwmULq3bFns3eFYXvMhb61kMwlS2asNg==",
+  "success": false,
   "projectFilePath": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\RestWithASPNet5Udemy1\\RestWithASPNet5Udemy1.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\MarcioRobertodaSilva\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "C:\\Users\\MarcioRobertodaSilva\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\MarcioRobertodaSilva\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
-    "C:\\Users\\MarcioRobertodaSilva\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
-    "C:\\Users\\MarcioRobertodaSilva\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "C:\\Users\\MarcioRobertodaSilva\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
-  ],
-  "logs": []
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Não é possível ler as informações do projeto para 'RestWithASPNet5Udemy1': Identificador de estrutura inválido ''."
+    }
+  ]
 }
