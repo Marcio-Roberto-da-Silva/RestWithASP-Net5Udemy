@@ -1,0 +1,8 @@
+﻿Build iniciado...
+1>------ Compilação iniciada: Projeto: RestWithASPNet5Udemy1, Configuração: Debug Any CPU ------
+1>C:\Users\MarcioRobertodaSilva\Documents\RestWithASP-Net5Udemy\RestWithASPNetUdemy\RestWithASPNet5Udemy1\Business\Implemementations\PersonServiceImplementation.cs(12,49,12,61): error CS0535: "PersonBusinessImplementation" não implementa membro de interface "BookBusiness.Create(person)"
+1>C:\Users\MarcioRobertodaSilva\Documents\RestWithASP-Net5Udemy\RestWithASPNetUdemy\RestWithASPNet5Udemy1\Business\Implemementations\PersonServiceImplementation.cs(12,49,12,61): error CS0738: "PersonBusinessImplementation" não implementa membro de interface "BookBusiness.FindByID(long)". "PersonBusinessImplementation.FindByID(long)" não pode implementar "BookBusiness.FindByID(long)" porqu não tem o tipo de retorno correspondente de "person".
+1>C:\Users\MarcioRobertodaSilva\Documents\RestWithASP-Net5Udemy\RestWithASPNetUdemy\RestWithASPNet5Udemy1\Business\Implemementations\PersonServiceImplementation.cs(12,49,12,61): error CS0738: "PersonBusinessImplementation" não implementa membro de interface "BookBusiness.Findall()". "PersonBusinessImplementation.Findall()" não pode implementar "BookBusiness.Findall()" porqu não tem o tipo de retorno correspondente de "List<person>".
+1>C:\Users\MarcioRobertodaSilva\Documents\RestWithASP-Net5Udemy\RestWithASPNetUdemy\RestWithASPNet5Udemy1\Business\Implemementations\PersonServiceImplementation.cs(12,49,12,61): error CS0535: "PersonBusinessImplementation" não implementa membro de interface "BookBusiness.Update(person)"
+1>Projeto de compilação pronto "RestWithASPNet5Udemy1.csproj" -- FALHA.
+========== Compilar: 0 com êxito, 1 com falha, 1 atualizados, 0 ignorados ==========
