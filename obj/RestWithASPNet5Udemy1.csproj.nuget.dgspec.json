@@ -1,0 +1,158 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\RestWithASPNet5Udemy1\\RestWithASPNet5Udemy1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\02_RestWithASP-Net5Udemy_Calculadora\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy_Calculadora.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\02_RestWithASP-Net5Udemy_Calculadora\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy_Calculadora.csproj",
+        "projectName": "RestWithASPNet5Udemy_Calculadora",
+        "projectPath": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\02_RestWithASP-Net5Udemy_Calculadora\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy_Calculadora.csproj",
+        "packagesPath": "C:\\Users\\MarcioRobertodaSilva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\02_RestWithASP-Net5Udemy_Calculadora\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MarcioRobertodaSilva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\RestWithASPNet5Udemy1\\RestWithASPNet5Udemy1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\RestWithASPNet5Udemy1\\RestWithASPNet5Udemy1.csproj",
+        "projectName": "RestWithASPNet5Udemy1",
+        "projectPath": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\RestWithASPNet5Udemy1\\RestWithASPNet5Udemy1.csproj",
+        "packagesPath": "C:\\Users\\MarcioRobertodaSilva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\RestWithASPNet5Udemy1\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MarcioRobertodaSilva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\02_RestWithASP-Net5Udemy_Calculadora\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy_Calculadora.csproj": {
+                "projectPath": "C:\\Users\\MarcioRobertodaSilva\\Documents\\RestWithASP-Net5Udemy\\RestWithASPNetUdemy\\02_RestWithASP-Net5Udemy_Calculadora\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy\\RestWithASPNet5Udemy_Calculadora.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Evolve": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[4.1.1, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
