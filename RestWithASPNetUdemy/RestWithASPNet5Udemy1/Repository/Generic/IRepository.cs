@@ -12,11 +12,14 @@ namespace RestWithASPNet5Udemy1.Repository {
 
         List<T> Findall();
 
-        T Update(T intem);
+        T Update(T item);
 
         void Delete(long id);
 
         bool Exists(long id);
+
+        List<T> FindWithPagedSearch(string query);
+        int GetCount(string query);
 
     }
 }

@@ -1,44 +1,87 @@
-﻿using RestWithASPNet5Udemy1.Model;
-using RestWithASPNet5Udemy1.Model.Context;
+﻿using RestWithASPNet5Udemy1.Data.Converter.Implementions;
+using RestWithASPNet5Udemy1.Data.VO;
+using RestWithASPNet5Udemy1.Hypermedia.Utils;
+using RestWithASPNet5Udemy1.Model;
 using RestWithASPNet5Udemy1.Repository;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 
 
 namespace RestWithASPNet5Udemy1.Business.Implemementations {
 
 
     public class PersonBusinessImplementation : IPersonBusiness {
-        
-        //private  readonly IPersonRepository repository ;
-        private IPersonRepository _repository;
+
+       
+        private readonly IPersonRepository _repository;
+
+        private readonly PersonConverter _converter;
 
         public PersonBusinessImplementation(IPersonRepository repository) {
 
             _repository = repository;
+            _converter = new PersonConverter();
         }
-        public List<Person> Findall() {
+        public List<PersonVO> Findall() {
 
-            return _repository.Findall();
+            return _converter.Parse (_repository.Findall());
         }
+        public PagedSearchVO<PersonVO> FindWithPagedSearch(
+            string name, string sortDirection, int pageSize, int page) 
+            {
+            var sort = (!string.IsNullOrWhiteSpace(sortDirection)) && !sortDirection.Equals("desc") ? "asc" : "desc";
+            var size = (pageSize < 1) ? 10: pageSize;
+            var offset = page > 0 ? (page - 1) * size : 0;
 
-        public Person FindByID(long id) {
+            string query = @"select * from person p where 1 = 1 ";
 
-            return _repository.FindByID(id);
+            if (!string.IsNullOrWhiteSpace(name)) query = query + $" and p.first_name like '%{name}%' ";
+            query += $" order by p.first_name {sort} limit {size} offset {offset}";
+                    
+
+            string countQuery = @"select count(*) from person p where 1 = 1 ";
+            if (!string.IsNullOrWhiteSpace(name)) countQuery = countQuery + $" and p.first_name like '%{name}%' ";
+
+            var persons = _repository.FindWithPagedSearch(query);
+            int totalResults = _repository.GetCount(countQuery);
+
+            return new PagedSearchVO<PersonVO> 
+            {
+                CurrentPage = page,
+                List = _converter.Parse(persons),
+                PageSize = size,
+                SortDirections = sort,
+                TotalResults = totalResults
+            };
         }
-        public Person Create(Person book) {
+        public PersonVO FindByID(long id) {
 
-            return _repository.Create(book);
+            return _converter.Parse ( _repository.FindByID(id));
         }
-        public Person Update(Person person) {
+        public List<PersonVO> FindByName(string firstName, string lastName) 
+            {
+            return _converter.Parse(_repository.FindByName(firstName, lastName));
+        }
+        public PersonVO Create(PersonVO person) {
 
-            return _repository.Update(person);
+            var personEntity = _converter.Parse(person);
+            personEntity = _repository.Create(personEntity);
+            return _converter.Parse(personEntity);
+        }
+        public PersonVO Update(PersonVO person) {
+
+            var personEntity = _converter.Parse(person);
+            personEntity = _repository.Update(personEntity);
+            return _converter.Parse(personEntity);
+        }
+        public PersonVO Disable(long id) 
+            {
+            var personEntity = _repository.Disable(id);
+            return _converter.Parse(personEntity);
         }
         public void Delete(long id) {
 
             _repository.Delete(id);
         }
-       
+
     }
 }

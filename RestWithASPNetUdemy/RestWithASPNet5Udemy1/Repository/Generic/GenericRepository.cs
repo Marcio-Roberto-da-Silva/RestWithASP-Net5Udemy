@@ -8,14 +8,16 @@ using System.Linq;
 namespace RestWithASPNet5Udemy1.Repository.Generic {
     public class GenericRepository<T> : IRepository<T> where T : BaseEntity {
 
-        private MySQLContext _Context;
+        protected MySQLContext _context;
 
         private DbSet<T> dateset;
+       
+
         public GenericRepository(MySQLContext context) {
-            _Context = context;
-            dateset = _Context.Set<T>();
+            _context = context;
+            dateset = _context.Set<T>();
         }
-     
+
         public List<T> Findall() {
             return dateset.ToList();
         }
@@ -26,27 +28,25 @@ namespace RestWithASPNet5Udemy1.Repository.Generic {
         public T Create(T item) {
             try {
                 dateset.Add(item);
-                _Context.SaveChanges();
+                _context.SaveChanges();
                 return item;
             } catch (Exception) {
 
                 throw;
             }
         }
-            public T Update(T item) {
+        public T Update(T item) {
             var result = dateset.SingleOrDefault(p => p.Id.Equals(item.Id));
             if (result != null) {
                 try {
-                    _Context.Entry(result).CurrentValues.SetValues(item);
-                    _Context.SaveChanges();
+                    _context.Entry(result).CurrentValues.SetValues(item);
+                    _context.SaveChanges();
                     return result;
-                }
-                catch (Exception) {
+                } catch (Exception) {
 
                     throw;
-                }   
-            }
-            else {
+                }
+            } else {
                 return null;
             }
         }
@@ -55,7 +55,7 @@ namespace RestWithASPNet5Udemy1.Repository.Generic {
             if (result != null) {
                 try {
                     dateset.Remove(result);
-                    _Context.SaveChanges();
+                    _context.SaveChanges();
                 } catch (Exception) {
 
                     throw;
@@ -65,5 +65,26 @@ namespace RestWithASPNet5Udemy1.Repository.Generic {
         public bool Exists(long id) {
             return dateset.Any(p => p.Id.Equals(id));
         }
+
+        public List<T> FindWithPagedSearch(string query) 
+            {
+            return dateset.FromSqlRaw<T>(query).ToList();
+        }
+
+        public int GetCount(string query) 
+            {
+            var result = "";
+
+            using (var connection = _context.Database.GetDbConnection())  
+                {
+                connection.Open();
+                using (var command = connection.CreateCommand()) 
+                    {
+                    command.CommandText = query;
+                    result = command.ExecuteScalar().ToString();
+                }
+            }
+            return int.Parse(result);
+        }
     }
-}
+}       

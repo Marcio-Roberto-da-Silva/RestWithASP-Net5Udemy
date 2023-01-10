@@ -1,17 +1,23 @@
-﻿using RestWithASPNet5Udemy1.Controllers;
-using RestWithASPNet5Udemy1.Model;
+﻿
+using RestWithASPNet5Udemy1.Data.VO;
+using RestWithASPNet5Udemy1.Hypermedia.Utils;
 using System.Collections.Generic;
 
 namespace RestWithASPNet5Udemy1.Business {
     public interface IPersonBusiness 
     {
-        Person Create(Person person);
+        PersonVO Create(PersonVO person);
 
-        Person FindByID(long id);
+        PersonVO FindByID(long id);
 
-        List<Person> Findall();
+        List<PersonVO> FindByName(string firstName, string lastName);
+        List<PersonVO> Findall();
+        PagedSearchVO<PersonVO> FindWithPagedSearch(
+            string name, string sortDirection, int pageSize, int page);
 
-        Person Update(Person person);
+        PersonVO Update(PersonVO person);
+
+        PersonVO Disable(long id);
 
         void Delete(long id);
     }

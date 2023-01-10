@@ -1,18 +1,19 @@
-﻿using RestWithASPNet5Udemy1.Model;
+﻿using RestWithASPNet5Udemy1.Data.VO;
+using RestWithASPNet5Udemy1.Model;
 using System.Collections.Generic;
 
 namespace RestWithASPNet5Udemy1.Business {
     public interface IBookBusiness 
     {
-        Book Create(Book book);
+        BookVO Create(BookVO book);
 
-        Book FindByID(long id);
+        BookVO FindByID(long id);
 
-        List<Book> Findall();
+        List<BookVO> Findall();
 
-        Book Update(Book book);
+        BookVO Update(BookVO book);
 
         void Delete(long id);
-
+       
     }
 }

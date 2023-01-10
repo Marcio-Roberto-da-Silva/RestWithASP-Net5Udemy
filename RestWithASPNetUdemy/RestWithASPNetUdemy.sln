@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestWithASPNet5Udemy1", "Re
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestWithASPNet5Udemy_Calculadora", "02_RestWithASP-Net5Udemy_Calculadora\RestWithASPNet5Udemy\RestWithASPNet5Udemy\RestWithASPNet5Udemy_Calculadora.csproj", "{7F6E45A4-9FBE-4711-85BE-05753113D020}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D7530D1B-F24C-44FA-93A1-A0EEBAE9B0BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7F6E45A4-9FBE-4711-85BE-05753113D020}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F6E45A4-9FBE-4711-85BE-05753113D020}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F6E45A4-9FBE-4711-85BE-05753113D020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7530D1B-F24C-44FA-93A1-A0EEBAE9B0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7530D1B-F24C-44FA-93A1-A0EEBAE9B0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7530D1B-F24C-44FA-93A1-A0EEBAE9B0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7530D1B-F24C-44FA-93A1-A0EEBAE9B0BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

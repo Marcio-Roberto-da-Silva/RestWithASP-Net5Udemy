@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using RestWithASPNet5Udemy1.Model.Base;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace RestWithASPNet5Udemy1.Model {
     [Table("person")]
-    public class Person 
+    public class Person : BaseEntity
         {
-        [Column("id")]
-        public long Id { get; set; }
         [Column("first_name")]
         public string FirstName { get; set; }
         [Column("last_name")]
@@ -19,7 +15,8 @@ namespace RestWithASPNet5Udemy1.Model {
         [Column("gender")]
         public string Gender { get; set; }
 
-
+        [Column("enabled")]
+        public bool Enabled { get; set; }
 
     }
 }

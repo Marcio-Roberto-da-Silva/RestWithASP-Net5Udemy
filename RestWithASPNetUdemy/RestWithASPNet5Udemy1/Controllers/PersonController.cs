@@ -1,16 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using RestWithASPNet5Udemy1.Model;
 using RestWithASPNet5Udemy1.Business;
-using System;
+using RestWithASPNet5Udemy1.Data.VO;
+using RestWithASPNet5Udemy1.Hypermedia.Filters;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 
 namespace RestWithASPNet5Udemy1.Controllers {
     [ApiVersion("1")]
     [ApiController]
+    [Authorize("Bearer")]
     [Route("api/[controller]/v{version:apiVersion}")]   
     public class PersonController : ControllerBase {
 
@@ -21,13 +20,27 @@ namespace RestWithASPNet5Udemy1.Controllers {
             _personBusiness = personBusiness;
         }
 
-        [HttpGet]
-        public IActionResult Get() {
+        [HttpGet("{sortDirection}/{pageSize}/{page}")]
+        [ProducesResponseType((200), Type = typeof(List<PersonVO>))]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult Get(
+            [FromQuery] string name,
+            string sortDirection,
+            int pageSize,
+            int page) 
+            {
 
-            return Ok(_personBusiness.Findall());
-
+            return Ok(_personBusiness.FindWithPagedSearch(name, sortDirection, pageSize, page));
         }
         [HttpGet("{id}")]
+        [ProducesResponseType((200), Type = typeof(PersonVO))]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get(long id) {
 
             var person = _personBusiness.FindByID(id);
@@ -35,8 +48,24 @@ namespace RestWithASPNet5Udemy1.Controllers {
             return Ok(person); 
 
         }
+        [HttpGet("findPersonByName")]
+        [ProducesResponseType((200), Type = typeof(PersonVO))]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult Get([FromQuery] string firstName, [FromQuery] string lastName)
+            {
+            var person = _personBusiness.FindByName(firstName, lastName);
+            if (person == null) return NotFound();
+            return Ok(person);
+        }
         [HttpPost]
-        public IActionResult Post([FromBody] Person person) {
+        [ProducesResponseType((200), Type = typeof(PersonVO))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult Post([FromBody] PersonVO person) {
 
             
             if (person == null) return BadRequest();
@@ -44,14 +73,31 @@ namespace RestWithASPNet5Udemy1.Controllers {
 
         }
         [HttpPut]
-        public IActionResult Put([FromBody] Person person) {
+        [ProducesResponseType((200), Type = typeof(PersonVO))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult Put([FromBody] PersonVO person) {
 
             
             if (person == null) return BadRequest();
             return Ok(_personBusiness.Update(person)); 
 
         }
+        [HttpPatch("{id}")]
+        [ProducesResponseType((200), Type = typeof(PersonVO))]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult Patch(long id) {
+            var person = _personBusiness.Disable(id);
+            return Ok(person);
+        }
         [HttpDelete("{id}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         public IActionResult Delete(long id) {
 
             _personBusiness.Delete(id);
